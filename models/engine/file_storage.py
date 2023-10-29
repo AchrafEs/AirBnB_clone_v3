@@ -81,6 +81,7 @@ class FileStorage:
         for value in all_cls.values():
             if (value.id == id):
                 return value
+
         return None
 
     def count(self, cls=None):
@@ -91,8 +92,8 @@ class FileStorage:
 
         if not cls:
             count = 0
-            for cls in all_class:
-                count += len(models.storage.all(cls).values())
+            for clas in all_class:
+                count += len(models.storage.all(clas).values())
             else:
                 count = len(models.storage.all(cls).values())
 
